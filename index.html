@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/reset.css" type="text/css" rel="stylesheet" />
+<title>Euterpe Home</title>
+
+ 
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Slicebox - 3D Image Slider with Fallback" />
+        <meta name="keywords" content="jquery, css3, 3d, webkit, fallback, slider, css3, 3d transforms, slices, rotate, box, automatic" />
+		<meta name="author" content="Pedro Botelho for Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/slicebox.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<script type="text/javascript" src="js/modernizr.custom.46884.js"></script>
+
+
+
+</head>
+
+<body>
+<div id="wrapper">
+<div id="leng">
+<ul>
+<li><a href="index10.html">Español</a>
+<li><a href="index.html">English</a>
+</ul>
+</div>
+<div id="head">
+<div id="logo">
+<a href="index.html"><img src="img/euterpe.png" alt="logo" width="433px" height="65px"/></a>
+</div>
+<div id="eslogan">
+<img src="img/eslogan.png" alt="eslogan" width="188px" height="30px"/>
+</div>
+</div><!--cierre del head-->
+<div id="nav">
+<ul>
+<li><a href="index.html">Home</a>
+<li><a href="index01.html">Events</a>
+<li><a href="index02.html">Music & Videos</a>
+<li><a href="index03.html">About Us</a>
+<li><a href="index04.html">Interviews</a>
+<li><a href="index05.html">Contact</a>
+</ul>
+</div><!--cierre del nav -->
+<div id="slider">
+
+
+
+<div class="container">
+
+			<div class="wrapper">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<img src="images/fondoss/WALLPAPERSaFULL_3640..jpg" alt="image1"/>
+						<div class="sb-description">
+							<h3>Our Port</h3>
+						</div>
+					</li>
+					<li>
+						<img src="images/fondoss/02l.jpg" alt="image2"/>
+						<div class="sb-description">
+							<h3>Crazy Vinyl</h3>
+						</div>
+					</li>
+					<li>
+						<img src="images/fondoss/8415615526_86e3c2e3d4_o.jpg" alt="image1"/>
+						<div class="sb-description">
+							<h3>Do you?</h3>
+						</div>
+					</li>
+					<li>
+						<img src="images/fondoss/dfgdfgdfg.jpg" alt="image1"/>
+						<div class="sb-description">
+							<h3>HeadPhonesFall</h3>
+						</div>
+					</li>
+					<li>
+						<img src="images/fondoss/fgsdfsdf01.jpg" alt="image1"/>
+						<div class="sb-description">
+							<h3>MakingArt</h3>
+						</div>
+					</li>
+					<li>
+						<img src="images/fondoss/tumblr_static_hd-wallpapers-hipster-wallpaper-w-ith-resolution-1280x800-wallpaper.jpg" alt="image1"/>
+						<div class="sb-description">
+							<h3>PyramidVOid</h3>
+						</div>
+					</li>
+					<li>
+						<img src="images/fondoss/Piedra_con_forma_de_Altavoz-1024x768-805457.jpeg" alt="image1"/>
+						<div class="sb-description">
+							<h3>SpeakerLand</h3>
+						</div>
+					</li>
+				</ul>
+
+				<div id="shadow" class="shadow"></div>
+
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+
+			</div><!-- /wrapper -->
+			
+
+		</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slicebox.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								$navArrows.show();
+								$shadow.show();
+
+							},
+							orientation : 'r',
+							cuboidsRandom : true,
+							disperseFactor : 30
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+			});
+		</script>
+
+
+
+
+
+
+</div><!--cierre del slider-->
+<div id="main">
+<div id="cuerpo">
+<div id="up">
+<div class="chico">
+<div class="foto">
+<a href="index01.html"><img src="images/a/01.jpg" alt="imagen" /></a>
+</div>
+<div class="link">
+<a href="index01.html">Events</a>
+</div>
+</div><!--cierre del grande-->
+<div class="grande">
+<div class="foto">
+<a href="index02.html"><img src="images/a/02.jpg" alt="imagen" /></a>
+</div>
+<div class="link">
+<a href="index02.html">Music & Videos</a>
+</div>
+</div><!--cierre del chico-->
+</div><!--cierre del up-->
+<div id="down">
+<div class="grande">
+<div class="foto">
+<a href="index03.html"><img src="images/a/03.jpg" alt="imagen" /></a>
+</div>
+<div class="link">
+<a href="index03.html">About Us</a>
+</div>
+</div><!--cierre del grande-->
+<div class="chico">
+<div class="foto">
+<a href="index04.html"><img src="images/a/04.png" alt="imagen" /></a>
+</div>
+<div class="link">
+<a href="index04.html">Interviews</a>
+</div>
+</div><!--cierre del chico-->
+</div><!--cierre del down-->
+</div><!--cierre del cuerpo-->
+</div><!--cierre del main______________________________________________-->
+<div id="footer">
+<div id="by">
+<p>Copyright © 2027 Proudly created by Joako Segovia</p>
+</div>
+<div id="net">
+<ul>
+<li><a target="_blank" href="https://www.facebook.com/euterpefun/"><img src="img/01.png" alt="face" width="40px" height="40px"/></a>
+<li><a target="_blank" href="https://twitter.com/"><img src="img/02.png" alt="twit" width="40px" height="40px"/></a>
+<li><a target="_blank" href="https://plus.google.com"><img src="img/03.png" alt="googlemas" width="40px" height="40px"/></a>
+<li><a target="_blank" href="https://www.youtube.com/"><img src="img/04.png" alt="youtube" width="40px" height="40px"/></a>
+</ul>
+</div>
+</div><!--cierre del footer-->
+</div><!--cierre del wrapper-->
+</body>
+</html>
